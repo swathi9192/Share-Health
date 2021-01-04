@@ -1,4 +1,3 @@
-
-export * from "./postsAction"
-export * from "./commentsAction"
-export * from "./authAction"
+export * from "./postsAction";
+export * from "./commentsAction";
+export * from "./authAction";

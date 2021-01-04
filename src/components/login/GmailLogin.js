@@ -2,23 +2,22 @@ import React from "react";
 import { connect } from "react-redux";
 import { signIn, signOut } from "../../redux/actions";
 
-
 class GmailLogin extends React.Component {
   componentDidMount() {
     window.gapi.load("client:auth2", () => {
-        window.gapi.client
-          .init({
-            clientId:
-              "888650686737-99vo39cnloqmlu8vk1816d7ih6hm3ilt.apps.googleusercontent.com",
-            scope: "email",
-          })
-          .then(() => {
-            this.auth = window.gapi.auth2.getAuthInstance();   
-                 
-            this.onAuthChange();
-            this.auth.isSignedIn.listen(this.onAuthChange);
-          });
-      });
+      window.gapi.client
+        .init({
+          clientId:
+            "888650686737-99vo39cnloqmlu8vk1816d7ih6hm3ilt.apps.googleusercontent.com",
+          scope: "email",
+        })
+        .then(() => {
+          this.auth = window.gapi.auth2.getAuthInstance();
+
+          this.onAuthChange();
+          this.auth.isSignedIn.listen(this.onAuthChange);
+        });
+    });
   }
 
   handleBtnClick = () => {
@@ -40,14 +39,12 @@ class GmailLogin extends React.Component {
   };
   render() {
     return (
-   
-        <a className="is-medium is-google" onClick={this.handleBtnClick}>
-          <span className="icon">
-            <i className="fab fa-google"></i>
-          </span>
-          <span>{this.props.isSignedIn ? "Sign Out" : "Sign In"}</span>
-        </a>
-     
+      <a className="is-medium is-google" onClick={this.handleBtnClick}>
+        <span className="icon">
+          <i className="fab fa-google"></i>
+        </span>
+        <span>{this.props.isSignedIn ? "Sign Out" : "Sign In"}</span>
+      </a>
     );
   }
 }

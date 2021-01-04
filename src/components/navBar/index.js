@@ -36,7 +36,7 @@ class NavBar extends React.Component {
         aria-label="main navigation"
       >
         <div className="navbar-brand">
-          <Link to="/" className="navbar-item">
+          <Link to={process.env.PUBLIC_URL} className="navbar-item">
             <img src={logo} className="appLogo"></img>
           </Link>
           <div
@@ -52,17 +52,16 @@ class NavBar extends React.Component {
           </div>
         </div>
         <div id="navBarItems" className="navbar-menu">
-        <div className="navbar-end">
-        <div className="navbar-item">
-        <Link to="/" className="navbar-item">
-            Home
-          </Link>
+          <div className="navbar-end">
+            <div className="navbar-item">
+              <Link to={process.env.PUBLIC_URL} className="navbar-item">
+                Home
+              </Link>
+            </div>
+            <div className="navbar-item">
+              <GmailLogin></GmailLogin>
+            </div>
           </div>
-          <div className="navbar-item">
-            <GmailLogin></GmailLogin>
-          </div>
-        </div> 
-         
         </div>
       </nav>
     );

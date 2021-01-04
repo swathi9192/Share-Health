@@ -1,10 +1,7 @@
-
-
 export const getPosts = (state) => {
-    return state.posts;
-}
+  return state.posts;
+};
 
-export const getPost = (state,id) => {   
-    return state.posts[id];
-}
-
+export const getPost = (state, id) => {
+  return state.posts[id];
+};

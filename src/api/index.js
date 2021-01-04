@@ -1,8 +1,7 @@
-import axios from 'axios'
+import axios from "axios";
 
-const apiInstance =  axios.create({
-    baseURL: `http://localhost:9001`
-  });
+const apiInstance = axios.create({
+  baseURL: `https://my-json-server.typicode.com/swathi9192/json-server-sharehealth`,
+});
 
-
-  export default apiInstance;
+export default apiInstance;

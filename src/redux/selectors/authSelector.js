@@ -1,3 +1,3 @@
-export const getAuthStatus = state => {
-    return state.auth;
-}
+export const getAuthStatus = (state) => {
+  return state.auth;
+};
