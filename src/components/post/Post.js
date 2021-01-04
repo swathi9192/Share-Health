@@ -1,13 +1,14 @@
 
 import React from 'react'
 import {connect} from 'react-redux'
+import CommentList from "../comments/CommentList"
+import PostComment from "../comments/PostComment"
+import GmailLogin from '../login/GmailLogin'
 import {getPost} from '../../redux/selectors/postsSelector'
 import {getComments} from '../../redux/selectors/commentsSelector'
 import {getAuthStatus} from '../../redux/selectors/authSelector'
 import {loadPost,loadComments,postComment,signIn,signOut} from '../../redux/actions/'
-import CommentList from "../comments/CommentList"
-import PostComment from "../comments/PostComment"
-import GmailLogin from '../login/GmailLogin'
+import {dateFormat} from "../../helpers/dateHelper"
 
 
 const getPostId = title => {
@@ -45,7 +46,7 @@ class Post extends React.Component {
                 <div className="column is-6 ">
                 <h1 className="title">{this.props.post.title}</h1>
              <h4 className="subtitle">{this.props.post.description}</h4>
-        <h6 className="subtitle is-6">{this.props.post.author} - {this.props.post.publish_date}</h6>
+        <h6 className="subtitle is-6">{this.props.post.author} - {dateFormat(this.props.post.publish_date)}</h6>
         <div className="content" dangerouslySetInnerHTML={{ __html: this.props.post.content }}>
         </div>
         

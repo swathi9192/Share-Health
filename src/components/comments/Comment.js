@@ -1,10 +1,8 @@
 
 import React from 'react';
-import {connect} from 'react-redux'
+
 import PostComment from './PostComment';
-import {postComment} from '../../redux/actions/'
-import { bindActionCreators } from 'redux';
-import { getAuthStatus } from '../../redux/selectors/authSelector';
+import {dateFormat } from '../../helpers/dateHelper';
 
 
 class Comment extends React.Component  {
@@ -15,7 +13,6 @@ class Comment extends React.Component  {
     state = {
         showNestedComments : false,
         showPostComment : false
-        
     }
     toggleNestedComments = () => {
         this.setState(prevState => ({showNestedComments: !prevState.showNestedComments }));
@@ -46,7 +43,7 @@ class Comment extends React.Component  {
             <div className="media-content">
     <div className="content">
       <p>
-    <strong>{comment.user}  </strong>   -   <small>  {format}</small>
+    <strong>{comment.user}  </strong>   -   <small>  {dateFormat(comment.date)}</small>
         <br/>
         {comment.content}
         <br/>
