@@ -9,6 +9,7 @@ import GmailLogin from "./login/GmailLogin";
 import NavBar from "./navBar";
 class App extends React.Component {
   render() {
+     
     return (
       <Router>
         <div className="container-fluid ">
@@ -16,13 +17,13 @@ class App extends React.Component {
             <NavBar />
             <Switch>
               <Route
-                path={process.env.PUBLIC_URL + "/"}
+                path= "/"
                 exact
                 component={Home}
               ></Route>
               <Route path="/login" exact component={GmailLogin} />
               <Route
-                path={process.env.PUBLIC_URL + "/:title"}
+                path= "/:title"
                 component={Post}
               ></Route>
               <Route component={() => <div>404 Not found </div>} />

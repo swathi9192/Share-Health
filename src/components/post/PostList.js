@@ -11,7 +11,7 @@ const PostList = (props) => {
           <div className="content">
             <h3 className="title">
               <Link
-                to={`${process.env.PUBLIC_URL}/${encodeURIComponent(
+                to={`/${encodeURIComponent(
                   post.title.split(" ").join("-").concat("-").concat(post.id)
                 )}`}
               >
