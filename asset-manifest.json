@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Share-Health/static/css/main.26bacb3c.chunk.css",
-    "main.js": "/Share-Health/static/js/main.1ec36723.chunk.js",
-    "main.js.map": "/Share-Health/static/js/main.1ec36723.chunk.js.map",
+    "main.css": "/Share-Health/static/css/main.8dbc76cf.chunk.css",
+    "main.js": "/Share-Health/static/js/main.a5f533f6.chunk.js",
+    "main.js.map": "/Share-Health/static/js/main.a5f533f6.chunk.js.map",
     "runtime-main.js": "/Share-Health/static/js/runtime-main.1f466145.js",
     "runtime-main.js.map": "/Share-Health/static/js/runtime-main.1f466145.js.map",
-    "static/js/2.dd22d065.chunk.js": "/Share-Health/static/js/2.dd22d065.chunk.js",
-    "static/js/2.dd22d065.chunk.js.map": "/Share-Health/static/js/2.dd22d065.chunk.js.map",
+    "static/js/2.19edfd6c.chunk.js": "/Share-Health/static/js/2.19edfd6c.chunk.js",
+    "static/js/2.19edfd6c.chunk.js.map": "/Share-Health/static/js/2.19edfd6c.chunk.js.map",
     "index.html": "/Share-Health/index.html",
-    "static/css/main.26bacb3c.chunk.css.map": "/Share-Health/static/css/main.26bacb3c.chunk.css.map",
-    "static/js/2.dd22d065.chunk.js.LICENSE.txt": "/Share-Health/static/js/2.dd22d065.chunk.js.LICENSE.txt"
+    "static/css/main.8dbc76cf.chunk.css.map": "/Share-Health/static/css/main.8dbc76cf.chunk.css.map",
+    "static/js/2.19edfd6c.chunk.js.LICENSE.txt": "/Share-Health/static/js/2.19edfd6c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1f466145.js",
-    "static/js/2.dd22d065.chunk.js",
-    "static/css/main.26bacb3c.chunk.css",
-    "static/js/main.1ec36723.chunk.js"
+    "static/js/2.19edfd6c.chunk.js",
+    "static/css/main.8dbc76cf.chunk.css",
+    "static/js/main.a5f533f6.chunk.js"
   ]
 }
