@@ -1,6 +1,6 @@
 
 import {Link} from 'react-router-dom'
-
+import {dateFormat} from "../../helpers/dateHelper"
 import "./Post.scss"
 
 const PostList = (props) => {
@@ -14,7 +14,7 @@ const PostList = (props) => {
                               <h3 className="title"><Link to={
                                 `/${encodeURIComponent(post.title.split(" ").join("-").concat("-").concat(post.id))}`}
                                   >{post.title}</Link></h3>
-                              <h6 className="subtitle has-text-grey mb-2">by {post.author} - {post.publish_date}</h6>
+                              <h6 className="subtitle has-text-grey mb-2">by {post.author} - {dateFormat(post.publish_date)}</h6>
                               <p>{post.description}</p>
                               </div>
                           </div>)

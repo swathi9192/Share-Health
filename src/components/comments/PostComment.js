@@ -3,7 +3,8 @@ import React from 'react'
 
 class PostComment extends React.Component {
     state = {
-        commentText : ""
+        commentText : "",
+        err : ""
     }
     handleTextAreaChange = (e) => {       
         this.setState({
@@ -11,8 +12,14 @@ class PostComment extends React.Component {
         });
     }
     submitComment = () => {
-console.log(this.props.parentId);
-        this.props.submitComment(this.state.commentText,this.props.parentId||null);
+        if(!this.state.commentText===null|| !this.state.commentText==="")
+        {
+            this.props.submitComment(this.state.commentText,this.props.parentId||null);
+        }
+        else {
+            this.setState({err:"Please enter some text to comment"});
+        }
+        
     }
     render(){
         return (
@@ -33,6 +40,7 @@ console.log(this.props.parentId);
                 <button className="button" onClick={this.submitComment}>Submit</button>
               </p>
             </div>
+        { this.state.err!=="" && <div class="notification is-danger is-light">{this.state.err}</div> }
           </div>
         </article>
         )

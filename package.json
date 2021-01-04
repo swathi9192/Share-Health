@@ -2,6 +2,7 @@
   "name": "blog-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/swathi9192/Share-Health",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
@@ -9,6 +10,7 @@
     "axios": "^0.21.1",
     "bulma": "^0.9.1",
     "html-to-react": "^1.4.5",
+    "moment": "^2.29.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
@@ -23,7 +25,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "sass": "^1.30.0"
   }
 }
