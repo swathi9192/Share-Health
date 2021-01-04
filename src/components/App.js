@@ -17,13 +17,13 @@ class App extends React.Component {
             <NavBar />
             <Switch>
               <Route
-                path= "/"
+                path= {process.env.PUBLIC_URL +"/"}
                 exact
                 component={Home}
               ></Route>
               <Route path="/login" exact component={GmailLogin} />
               <Route
-                path= "/:title"
+                path= {process.env.PUBLIC_URL +"/:title"}
                 component={Post}
               ></Route>
               <Route component={() => <div>404 Not found </div>} />
